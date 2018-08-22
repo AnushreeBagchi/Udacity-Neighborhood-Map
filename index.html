@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+        <div style="display: flex">
+            <div>                
+                <table>
+                    <thead>
+                          <th>  <input type='text' id='search' placeholder='Enter area to search'> </th>
+                    </thead>
+                    <tbody id="list" data-bind="foreach: model.locations">
+                            <tr data-bind="text: title"  >
+                                    <td ></td>                                    
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="map"></div>
+
+    
+        <script src="js/lib/knockout-3.2.0.js"></script>
+        <script src='js/model.js'></script>
+        <script src='js/script.js'></script>
+        <script 
+        src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCcPzSyp1d86a1CeicC9tacYzJFssnEwOQ&v=3&callback=initMap">
+    </script>
+
+  </body>
+</html>

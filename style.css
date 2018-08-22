@@ -1,0 +1,13 @@
+html,
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  height: 100%;
+}
+td,table,th{
+  border:1px solid black;
+}
