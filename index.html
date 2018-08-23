@@ -8,10 +8,11 @@
             <div>                
                 <table>
                     <thead>
-                          <th>  <input type='text' id='search' placeholder='Enter area to search'> </th>
+                          <th>  <input type='text' id='search' placeholder='Enter area to search' data-bind='textInput:searchItem'> </th>
+                          
                     </thead>
-                    <tbody id="list" data-bind="foreach: model.locations">
-                            <tr data-bind="text: title"  >
+                    <tbody data-bind="foreach: locationList">
+                            <tr  class="list" data-bind="text:title" >
                                     <td ></td>                                    
                             </tr>
                     </tbody>

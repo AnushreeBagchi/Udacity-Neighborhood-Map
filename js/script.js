@@ -5,9 +5,10 @@ function initMap () {
 };
 
 var ViewModel = function (){
+    
     var self=this;
     this.markers=[];
-    this.searchText=ko.observable();
+    
     //Displaying markers for the defined locations.
     for  (var i=0;i<model.locations.length;i++)
     {
@@ -22,24 +23,29 @@ var ViewModel = function (){
         });
         this.markers.push(this.marker);              
     };
+    // Creating Location list filter
 
-    //Creating Initial Title list
-    this.titleList=ko.observableArray([]);
-    for (var i=0;i<model.locations.length;i++)
-    {
-        this.titleList.push(model.locations[i].title); 
-    }
-    document.getElementById('search').addEventListener('input',function (){
-        this.searchText=document.getElementById('search').value;
-        console.log( this.searchText);
-    }); 
-    
-    
-    
+    this.searchItem = ko.observable('');
+    this.mapList = ko.observableArray([]);
+    for (var i=0;i<model.locations.length;i++){
+        var item=model.locations[i];
+        self.mapList.push(item);
+    };    
+    this.locationList = ko.computed(function() {
+        var searchFilter = self.searchItem().toLowerCase();
+        if (searchFilter) {            
+                var result=[];
+                for (var i =0;i<self.mapList().length;i++)
+                {
+                    var str = self.mapList()[i].title.toLowerCase();
+                    if (str.includes(searchFilter)){
+                        result.push(self.mapList()[i]);
+                    }
+                }               
+                return result;
+            }
+            else{
+                return self.mapList();
+            };
+    });
 };
-
-
-
-
-
-
