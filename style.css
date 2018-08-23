@@ -6,8 +6,47 @@ body {
   padding: 0;
 }
 #map {
-  height: 100%;
+  
+    margin: 0;    
+    left: 15em;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width:70em;
+    align-items: right;    
+    overflow: scroll;
+}
+table{
+    width: 15em;
+    height: 100%;
+}
+th{
+  height:2em;
+}
+#search{
+  height:100%;
+  width:100%;
+  padding:0px;
+  border-width: 0px;
 }
 td,table,th{
   border:1px solid black;
+}
+.body {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  height:100%;
+
+}
+#left-pane{
+  position: absolute;
+  width: 15em;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  color: white;
+  background-color: burlywood;
+    
 }

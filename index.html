@@ -4,12 +4,11 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-        <div style="display: flex">
-            <div>                
+        <div class='body'>
+            <div id='left-pane'>                
                 <table>
                     <thead>
-                          <th>  <input type='text' id='search' placeholder='Enter area to search' data-bind='textInput:searchItem'> </th>
-                          
+                          <th>  <input type='text' id='search' placeholder='Enter area to search' data-bind='textInput:searchItem'> </th>                          
                     </thead>
                     <tbody data-bind="foreach: locationList">
                             <tr  class="list" data-bind="text:title" >
@@ -18,8 +17,9 @@
                     </tbody>
                 </table>
             </div>
+            <div id="map"></div>
         </div>
-        <div id="map"></div>
+        
 
     
         <script src="js/lib/knockout-3.2.0.js"></script>
