@@ -1,3 +1,8 @@
+// Error handler
+function googleMapsError() {
+    alert('An error occurred with Google Maps!');
+};
+
 function initMap () {
     map = new google.maps.Map(document.getElementById('map'), model.neighborhood);
 
@@ -47,7 +52,7 @@ var ViewModel = function (){
     };
     
     function populateInfoWindow (marker, infowindow){
-        //make sure info window is not already  opened in this marker.
+    //make sure info window is not already  opened in this marker.
         if (infowindow.marker!=marker)
         {
             infowindow.marker=marker;
@@ -66,7 +71,7 @@ var ViewModel = function (){
         var item=model.locations[i];
         self.mapList.push(item);
     };  
-    // Creating Location list filter
+// Creating Location list filter
     this.locationList = ko.computed(function() {
         var searchFilter = self.searchItem().toLowerCase();
         if (searchFilter) {            
@@ -86,7 +91,7 @@ var ViewModel = function (){
     });
     
     
-    //Displaying markers on the location list
+//Displaying markers on the location list
     //1.create computed array on observable array
     this.showMarkers= ko.computed(function(){
         var list= self.locationList();
@@ -126,6 +131,7 @@ var ViewModel = function (){
             populateInfoWindow(self.markers[i], infowindow);
         }
     }
-   }
+   };
+
     
 };
