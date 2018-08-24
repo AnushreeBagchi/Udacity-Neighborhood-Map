@@ -110,7 +110,7 @@ var ViewModel = function (){
         };
     }, self);
 
-    // addinf event listener to list items 
+    // adding event listener to list items 
     // zoom to the location when an item is clicked
    function  zoomToArea(){
     console.log(this);
@@ -129,8 +129,8 @@ var ViewModel = function (){
             self.markers[i].setAnimation(google.maps.Animation.BOUNCE);
             self.markers[i].setIcon(hovericon);
             populateInfoWindow(self.markers[i], infowindow);
-        }
-    }
+        };
+    };
    };
 
     

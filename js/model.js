@@ -88,7 +88,7 @@ var model= {
         {title: 'BTM Layout', location: {lat: 12.9165757, lng: 77.6101163}},
         {title: 'Banashankari', location: {lat: 12.9565439, lng: 77.5736991}},
         {title: 'HAL Airport', location: {lat: 12.9548472, lng: 77.68491399999999}},
-        {title: 'Columbia Hospital,Whitefield', location: {lat: 12.958246, lng: 77.745384}},
+        {title: 'Columbia Hospital, Whitefield', location: {lat: 12.958246, lng: 77.745384}},
         {title:'Kempegowda International Airport',location:{lat:13.1986348, lng:77.7065928}}
       ]
     

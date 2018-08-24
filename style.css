@@ -5,19 +5,9 @@ body {
   margin: 0;
   padding: 0;
 }
-#map {
-  
-    margin: 0;    
-    left: 15em;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    width:70em;
-    align-items: right;    
-    overflow: scroll;
-}
+
 table{
-    width: 15em;
+    width: 100%;
     height: 100%;
 }
 th{
@@ -31,6 +21,7 @@ th{
 }
 td,table,th{
   border:1px solid black;
+  font-size: 1em;
 }
 .body {
   display: flex;
@@ -41,12 +32,24 @@ td,table,th{
 }
 #left-pane{
   position: absolute;
-  width: 15em;
+  width: 20%;
   left: 0px;
   top: 0px;
   bottom: 0px;
   right: 0px;
   color: white;
   background-color: burlywood;
-    
+  overflow-wrap: normal;  
+  overflow: scroll;  
+}
+#map {
+  
+  margin: 0;    
+  left: 20%;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  width:80%;
+  align-items: right;    
+  overflow: scroll;
 }
