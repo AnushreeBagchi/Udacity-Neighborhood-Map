@@ -104,7 +104,28 @@ var ViewModel = function (){
             }           
         };
     }, self);
- 
-    
+
+    // addinf event listener to list items 
+    // zoom to the location when an item is clicked
+   function  zoomToArea(){
+    console.log(this);
+   };
+// Functionality when an item in the left pane is clicked.
+   this.listClick= function (location){    
+    //Reset Animation for other markers
+    for (let i=0;i<self.markers.length;i++){
+        self.markers[i].setAnimation();
+        self.markers[i].setIcon(defaulticon);
+    }
+    // loop through the list of markers to get the marker with current location    
+    for (let i=0;i<self.markers.length;i++)
+    {        
+        if (self.markers[i].title===this.title){
+            self.markers[i].setAnimation(google.maps.Animation.BOUNCE);
+            self.markers[i].setIcon(hovericon);
+            populateInfoWindow(self.markers[i], infowindow);
+        }
+    }
+   }
     
 };

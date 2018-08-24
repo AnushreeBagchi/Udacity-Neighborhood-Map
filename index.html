@@ -11,7 +11,7 @@
                           <th>  <input type='text' id='search' placeholder='Enter area to search' data-bind='textInput:searchItem'> </th>                          
                     </thead>
                     <tbody data-bind="foreach: locationList">
-                            <tr  class="list" data-bind="text:title" >
+                            <tr  class="list" data-bind="text:title ,click: $parent.listClick"  >
                                     <td ></td>                                    
                             </tr>
                     </tbody>
