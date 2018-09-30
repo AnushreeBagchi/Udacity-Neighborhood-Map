@@ -21,21 +21,21 @@
         </div>
         <div id='left-pane' class='searchCol shadow p-1 mb-5 bg-white rounded container-fluid'>
             <div class="row">
-                <div class='col-sm-10 col-md-10 col-lg-10'>
+                <div class='col-sx-10 col-sm-10 col-md-10 col-lg-10 search-div'>
                     <input type="text" data-bind='textInput:searchItem' placeholder='Enter area to search' id='search' class="form-control "
                         aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" />
                 </div>
-                <div class='col-sm-2 col-md-2 col-lg-2 icon'>
+                <div class='col-sx-2 col-sm-2 col-md-2 col-lg-2 icon'>
                     <button class='search-icon'>
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
             </div>
-            <div class="row" data-bind="foreach: locationList, visible:searchItem">
-                <div class='col-sm-4 col-md-4 col-lg-2'>
+            <div class="row filter" data-bind="foreach: locationList, visible:searchItem">
+                <div class='col-sx-2 col-sm-2 col-md-2 col-lg-2 icon'>
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
-                <div class="list col-sm-8 col-md-8 col-lg-10 pt-1 pb-1 pr-0 pl-0 " data-bind="text:title ,click: $parent.listClick">
+                <div class="list col-sx-10 col-sm-10 col-md-10 col-lg-10 pt-1 pb-1 pr-0 pl-0 " data-bind="text:title ,click: $parent.listClick">
                 </div>
             </div>
         </div>

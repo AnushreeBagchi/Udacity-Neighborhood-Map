@@ -66,7 +66,45 @@ body {
   padding: 0px;
 }
 
-.icon{
-  padding-left :0px ;
-  padding-right :0px; 
+.form-control:focus {
+  box-shadow:none;
 }
+
+/* Media Query */
+ /* Extra small devices (portrait phones, less than 576px) */
+ @media (max-width: 575.98px) { 
+  #left-pane{
+    width:90%;
+  }
+  .search-div, .list{
+    width:90%;
+  }
+  .icon{
+    width:10%;
+  }
+  .filter{
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  #left-pane{
+    width:60%;
+  }
+ }
+
+ /* Medium devices (tablets, less than 992px) */
+ @media (min-width: 768px) and (max-width: 991.999px) { 
+  #left-pane{
+    width:40%;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+  #left-pane{
+    width:25%;
+  }
+ }
