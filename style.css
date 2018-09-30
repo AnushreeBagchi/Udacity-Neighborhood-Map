@@ -6,50 +6,67 @@ body {
   padding: 0;
 }
 
-table{
-    width: 100%;
-    height: 100%;
-}
-th{
-  height:2em;
-}
 #search{
-  height:100%;
-  width:100%;
-  padding:0px;
+  padding-right:0px;
   border-width: 0px;
+  margin-right:1em;
 }
-td,table,th{
-  border:1px solid black;
-  font-size: 1em;
+
+.list{
+  border-top: 1px solid #e6e6e6;
+  height: 2em;
+  padding-left: 0px;
+  padding-right:0px;
 }
+
 .body {
   display: flex;
   flex-direction: row;
-  width:100%;
-  height:100%;
-
+  width:100vw;
+  height:100vh;
 }
+
 #left-pane{
-  position: absolute;
-  width: 20%;
-  left: 0px;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  color: white;
-  background-color: burlywood;
   overflow-wrap: normal;  
   overflow: scroll;  
+  padding-right:0;
+  padding-left:0;
+  width: 25%;
+  position: absolute;
+  margin-top: 0.7em;
+  margin-left: 0.7em;
+  cursor: pointer;
 }
+
 #map {
+  position: absolute;
+  left:0;
+  height: 100vh;
+  padding-right:0;
+  padding-left:0;
   
-  margin: 0;    
-  left: 20%;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  width:80%;
-  align-items: right;    
-  overflow: scroll;
+}
+
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.search-icon{
+  border: none;
+  align-items: center;
+  margin-top: 0.4em;
+  margin-left:0.4em;
+  padding: 0px;
+}
+
+.icon{
+  padding-left :0px ;
+  padding-right :0px; 
 }

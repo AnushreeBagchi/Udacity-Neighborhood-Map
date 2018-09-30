@@ -8,9 +8,11 @@ function initMap() {
 
     ko.applyBindings(new ViewModel());
 };
+// display filter on click
 
-
-
+// document.getElementById('search').addListener('change',function(){
+    
+// };
 
 
 var ViewModel = function () {
@@ -115,6 +117,8 @@ var ViewModel = function () {
     // Functionality when an item in the left pane is clicked.
     this.listClick = function (location) {
         //Reset Animation for other markers
+        // debugger;
+        self.searchItem(this.title);
         for (let i = 0; i < self.markers.length; i++) {
             self.markers[i].setAnimation();
             self.markers[i].setIcon(defaulticon);
